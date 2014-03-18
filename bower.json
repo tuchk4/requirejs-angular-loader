@@ -1,0 +1,12 @@
+{
+  "name": "requirejs-angualr-loader",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "text": ">=2.0.0"
+  }
+}

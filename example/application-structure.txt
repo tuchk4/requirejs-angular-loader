@@ -1,0 +1,10 @@
+|-application/
+            |-module/
+                    |-controllers/
+                                 |-*
+                    |-resources/
+                               |-*
+                    |-src/
+                         |-*
+                    |-module.js
+                    |-module-includes.js
