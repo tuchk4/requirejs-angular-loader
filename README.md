@@ -17,8 +17,8 @@ The goals:
  - Reduce code dependecy on application structure and module's names
 
 
-Module 
-========
+#### Module 
+
 File that return ngModule
 
 ```javascript
@@ -29,12 +29,12 @@ define(function(require){
 })
 ```
 
-Template
-=========
+#### Template
+
 This plugin depends on requirejs text plugin. Used for loading templates
 
-Controller / Service / Directive / Filter / Config
-=========
+#### Controller / Service / Directive / Filter / Config
+
 Similar goal - load components
 
 
