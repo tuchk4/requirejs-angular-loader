@@ -148,7 +148,7 @@ define(function(){
       var component = this.value(name);
 
       var path = structure[type].path
-        .replace('{' + type + '}', component);
+        .replace(new RegExp('{' + type + '}', 'g'), component);
 
       return this.path(path, config, url);
     },
