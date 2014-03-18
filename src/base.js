@@ -161,17 +161,21 @@ define(function(){
      */
     normalize: function (name, normalize)
     {
+      var normalized;
+
       if (name.split(':').length == 1){
 
         var config = requirejs.s.contexts._.config;
 
         var module = this.getCurrentModule(config, config.baseUrl  + this.getCurrentUrl(normalize));
 
-        return module + ':' + name;
+        normalized = module + ':' + name;
 
       } else {
-        return name;
+        normalized = name;
       }
+
+      return normalized;
     }
   }
 });

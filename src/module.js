@@ -3,20 +3,14 @@ define(['base'], function(base){
 
     normalize: function (name, normalize) {
 
-      if (name.split(':').length == 1){
+      var normalized = name;
 
+      if (name == '@'){
         var config = requirejs.s.contexts._.config;
-        var module = base.getCurrentModule(config, config.baseUrl  + base.getCurrentUrl(normalize));
-
-        if (name == '@'){
-          return module;
-        } else {
-          return module + ':' + name;
-        }
-
-      } else {
-        return name;
+        normalized = base.getCurrentModule(config, config.baseUrl  + base.getCurrentUrl(normalize));
       }
+
+      return normalized;
     },
 
     load: function (name, req, onload, config) {
