@@ -1,5 +1,5 @@
-Loading angular components with requirejs
-==========
+# Loading angular components with requirejs
+
 
 Ther are 7 plugins for loading angularjs components:
 
