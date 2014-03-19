@@ -41,6 +41,8 @@ Similar goal - load components
 Examples
 ========
 
+Example application you could find here: https://github.com/tuchk4/requirejs-angular-loader-bootstrap
+
 For example we have application with such structure:
 
     app
