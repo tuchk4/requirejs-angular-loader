@@ -1,5 +1,6 @@
 ## Loading angular components with requirejs
 
+![alt text](http://habrastorage.org/files/db8/049/a1f/db8049a1fac64bc393eb29e52b3bb03c.png "Application structure")
 
 Ther are 7 plugins for loading angularjs components:
 
