@@ -14,8 +14,8 @@ Ther are 7 plugins for loading angularjs components:
 
 The goals: 
  
- - Add module support to application. Module - means not ng module but something like "namespace" for controllers, directives, filters, templates etc
- - Reduce code dependecy on application structure and module's names
+ - Add module support to application. Module - means not ng module but something like "namespace" for controllers, directives, filters, templates etc;
+ - Reduce code dependecy on application structure and module's names.
 
 
 #### Module 
@@ -32,11 +32,11 @@ define(function(require){
 
 #### Template
 
-This plugin depends on requirejs text plugin. Used for loading templates
+This plugin depends on requirejs text plugin. Used for loading templates.
 
 #### Controller / Service / Directive / Filter / Config
 
-Similar goal - load components
+Similar goal - load components.
 
 
 Examples
@@ -54,7 +54,7 @@ For example we have application with such structure:
        |       |    |-menu.js    
        |       |-user
        |             |-controllers
-       |             |           |-user-controller.js
+       |             |           |-profile.js
        |             |-resources
        |             |          |-templates
        |             |          |       |-user-profile.html
@@ -80,9 +80,9 @@ We want to include **menu** ng module (/app/modules/menu/menu) in file:
   
 We want to include **user-controller** (/app/modules/user/controllers/user-controller) in file:
  
-  - **/app/application.js**  -  `require('controller!user:user-controller')`. Before **:** - module name, after - controller name.
-  - **/app/modules/user.js** -  `require('controller!user:user-controller')`
-  - **/app/modules/user/user.js**  -  `require('controller!user-controller')`. So if you want to load controller from current module (current module I mean module under which current file is located) - you could write only controller file name. Module will be detected from current path.
+  - **/app/application.js**  -  `require('controller!user:profile')`. Before **":"** - module name, after - controller name.
+  - **/app/modules/user.js** -  `require('controller!user:profile')`
+  - **/app/modules/user/user.js**  -  `require('controller!profile')`. So if you want to load controller from current module (current module I mean module under which current file is located) - you could write only controller name. Module will be detected from current path.
   
 
 Same for **directives**, **services**, **templates**, **filters**, **configs**.
