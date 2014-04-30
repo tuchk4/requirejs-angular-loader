@@ -81,12 +81,13 @@ define(function(){
      * @param url
      * @returns {string}
      */
-    path: function(path, config, url)
+    path: function(path, config, url, module)
     {
       var prefix = config.structure.prefix;
-      var module = this.getCurrentModule(config, url);
 
-      return prefix.replace('{module}', module) + path;
+      return prefix.replace('{module}', 
+        (module || this.getCurrentModule(config, url))
+      ) + path;
     },
 
     /**
@@ -112,6 +113,22 @@ define(function(){
       }
 
       return placeholder;
+    },
+
+    /**
+     *
+     * @param name
+     * @returns {*}
+     */
+    module: function(name)
+    {
+      var parts = name.split(':');
+     
+      if (parts.length != 2){
+        return null;
+      }
+
+      return parts[0];
     },
 
     /**
@@ -149,8 +166,10 @@ define(function(){
 
       var path = structure[type].path
         .replace(new RegExp('{' + type + '}', 'g'), component);
+     
+      var module = this.module(name);
 
-      return this.path(path, config, url);
+      return this.path(path, config, url, module);
     },
 
     /**
