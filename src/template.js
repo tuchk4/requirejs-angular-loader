@@ -23,7 +23,9 @@ define(['base'], function(base){
         .replace('{template}', template)
         .replace('{extension}', extension);
 
-      var reqPath = base.path(path, config, base.getCurrentUrl(req));
+      var module = base.module(name);
+
+      var reqPath = base.path(path, config, base.getCurrentUrl(req), module);
 
 
       req(['text!' + reqPath], function(value){
