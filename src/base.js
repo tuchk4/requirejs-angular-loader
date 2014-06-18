@@ -70,7 +70,7 @@ define(function(){
       var prefix = config.structure.prefix;
 
       return url.replace(
-        new RegExp('^.*'+(baseUrl + prefix.replace('{module}', ''))),
+        new RegExp('^.*'+(baseUrl + prefix.replace(/{module}/g, ''))),
         '').split('/')[0];
     },
 
@@ -85,7 +85,7 @@ define(function(){
     {
       var prefix = config.structure.prefix;
 
-      return prefix.replace('{module}', 
+      return prefix.replace(/{module}/g, 
         (module || this.getCurrentModule(config, url))
       ) + path;
     },
