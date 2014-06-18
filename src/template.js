@@ -20,8 +20,8 @@ define(['base'], function(base){
       }
 
       var path = structure.template.path
-        .replace('{template}', template)
-        .replace('{extension}', extension);
+        .replace(/{template}/g, template)
+        .replace(/{extension}/g, extension);
 
       var module = base.module(name);
 
