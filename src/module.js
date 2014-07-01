@@ -26,7 +26,7 @@ define(['base'], function(base){
       }
 
       var path = structure.module.path
-        .replace('{module}', module);
+        .replace(/{module}/g, module);
 
       var reqPath = base.path(path, config, base.getCurrentUrl(req));
 
