@@ -1,3 +1,9 @@
+## Important
+
+I will publish node component for generation plugins according to nested structure config. It will be more flexible and powerful and do not relate to any framework. Just plugins.
+
+
+
 ## Loading angular components with requirejs
 
 ![alt text](http://habrastorage.org/files/db8/049/a1f/db8049a1fac64bc393eb29e52b3bb03c.png "Application structure")
